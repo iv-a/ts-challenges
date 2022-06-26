@@ -1,0 +1,28 @@
+// ============= Test Cases =============
+import type { Equal, Expect } from './test-utils'
+
+type cases = [
+  Expect<Equal<IsAny<any>, true>>,
+
+  Expect<Equal<IsAny<undefined>, false>>,
+  Expect<Equal<IsAny<unknown>, false>>,
+  Expect<Equal<IsAny<never>, false>>,
+  Expect<Equal<IsAny<string>, false>>,
+]
+
+
+// ============= Your Code Here =============
+
+// Solution 1
+{
+type IsAny<T> = 
+  [T] extends [never] 
+    ? false
+    : keyof any extends keyof T
+      ? true
+      : false;
+}
+
+// Solution 2
+type IsAny<T> = 
+  0 extends (1 & T) ? true : false;
