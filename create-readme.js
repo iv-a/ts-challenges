@@ -64,15 +64,13 @@ fs.readdirSync(currentDirectory).forEach(folder => {
       const text = h1Content.replace(/<img.*?>/g, '').trim();
       const images = (h1Content.match(/<img.*?>/g) || []).join(' ');
 
-      tableRows.push(`<tr><td>${taskNumber}</td><td><a href="./challenges/${folder}/README.md" target="_blank"><h4>${text}</h4></a></td><td>${images}</td></tr>`);
+      tableRows.push(`<tr><td>${taskNumber}</td><td><a href="./challenges/${folder}/README.md" target="_blank"><strong>${text}</strong></a></td><td>${images}</td></tr>`);
     }
   }
 });
 
 tableRows.push(`
 </table>
-</body>
-</html>
 `);
 
 // Создать новый .md файл и записать в него таблицу
