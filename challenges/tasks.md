@@ -1,13 +1,3 @@
-<p align='center'>
-  <img src='./assets/logo-dark.png' width='400'/>
-</p>
-
-<h3>Репозиторий с решениями <a href="https://github.com/type-challenges/type-challenges">type-challenges</a></h3>
-
-<hr>
-<br>
-
-
 
 <table>
   <tr>
@@ -157,3 +147,5 @@
 <tr><td>139</td><td><a href="./challenges/26401-medium-json-schema-to-typescript/README.md" target="_blank"><h4>JSON Schema to TypeScript</h4></a></td><td><img src="https://img.shields.io/badge/-medium-d9901a" alt="medium"/> <img src="https://img.shields.io/badge/-%23JSON-999" alt="#JSON"/></td></tr>
 
 </table>
+</body>
+</html>

@@ -31,7 +31,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const currentDirectory = process.cwd();
+const currentDirectory = path.resolve('./challenges');
 let tableRows = [];
 let taskNumber = 0; // Номер задачи
 
@@ -64,7 +64,7 @@ fs.readdirSync(currentDirectory).forEach(folder => {
       const text = h1Content.replace(/<img.*?>/g, '').trim();
       const images = (h1Content.match(/<img.*?>/g) || []).join(' ');
 
-      tableRows.push(`<tr><td>${taskNumber}</td><td><a href="./${folder}/"><h4>${text}</h4></a></td><td>${images}</td></tr>`);
+      tableRows.push(`<tr><td>${taskNumber}</td><td><a href="./challenges/${folder}/README.md" target="_blank"><h4>${text}</h4></a></td><td>${images}</td></tr>`);
     }
   }
 });
